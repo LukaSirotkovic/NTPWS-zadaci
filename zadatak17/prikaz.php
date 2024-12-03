@@ -2,15 +2,15 @@
 include 'db_connect.php'; // Povezivanje na bazu
 
 $sql = "SELECT 
-            users.name AS first_name, 
-            users.lastname AS last_name, 
+            korisnici.name AS first_name, 
+            korisnici.lastname AS last_name, 
             countries.name AS country_name 
         FROM 
-            users
+            korisnici
         INNER JOIN 
             countries 
         ON 
-            users.country_id = countries.id";
+            korisnici.country_id = countries.id";
 
 $result = $conn->query($sql);
 

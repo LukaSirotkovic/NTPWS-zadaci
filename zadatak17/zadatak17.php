@@ -16,6 +16,6 @@
 </head>
 <body>
     <h1>Popis korisnika i njihovih država</h1>
-    <?php include 'fetch_users.php'; ?>
+    <?php include 'prikaz.php'; ?>
 </body>
 </html>

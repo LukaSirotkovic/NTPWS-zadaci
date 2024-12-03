@@ -2,9 +2,9 @@
 include 'db_connect.php';
 
 // Dohvati sve korisnike i njihove pripadajuće države
-$sql = "SELECT users.id AS user_id, users.name AS first_name, users.lastname AS last_name, countries.name AS country_name, countries.id AS country_id
-        FROM users
-        INNER JOIN countries ON users.country_id = countries.id";
+$sql = "SELECT korisnici.id AS user_id, korisnici.name AS first_name, korisnici.lastname AS last_name, countries.name AS country_name, countries.id AS country_id
+        FROM korisnici
+        INNER JOIN countries ON korisnici.country_id = countries.id";
 $result = $conn->query($sql);
 
 // Prikaz korisnika s opcijom uređivanja

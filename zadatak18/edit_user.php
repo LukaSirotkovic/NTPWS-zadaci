@@ -5,7 +5,7 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     $user_id = intval($_GET['id']);
 
     // Dohvati podatke korisnika
-    $sql_user = "SELECT * FROM users WHERE id = ?";
+    $sql_user = "SELECT * FROM korisnici WHERE id = ?";
     $stmt = $conn->prepare($sql_user);
     $stmt->bind_param("i", $user_id);
     $stmt->execute();
